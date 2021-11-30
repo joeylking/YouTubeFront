@@ -1,13 +1,17 @@
+import './VideoPlayer.css';
+
 const VideoPlayer = props => {
   return (
-    <iframe
-      id='ytplayer'
-      type='text/html'
-      width='640'
-      height='360'
-      src={`https://www.youtube.com/embed/${props.video}?autoplay=1`}
-      frameborder='0'
-    ></iframe>
+    <div className='video-container'>
+      <iframe
+        id='ytplayer'
+        type='text/html'
+        src={`https://www.youtube.com/embed/${props.video}?autoplay=1`}
+        frameborder='0'
+        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+        allowFullScreen
+      ></iframe>
+    </div>
   );
 };
 
